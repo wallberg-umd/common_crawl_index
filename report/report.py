@@ -15,24 +15,19 @@ entries = sys.stdin.readlines()
 
 for entry in entries:
     
-    # parse each entry
+    # parse the entry
     s = entry.split(' ',1)
 
-    m = re.search('([^/]+)(.*):(.*)', s[0])
-
-    host = m.group(1).split('.')
-    host.reverse()
-    host = '.'.join(host)
-    
-    path = m.group(2)
-    method = m.group(3)
-
+    (host,path,method) = re.search('([^/]+)(.*):(.*)', s[0]).group(1,2,3)
     attrs = eval(s[1])
+
+    hostParts = host.split('.')
+    hostParts.reverse()
+    host = '.'.join(hostParts)
+    
     date = attrs['arcFileDate']
     
-    #print host, path, method, attrs
-
-    # record the stats for this entry
+    # record the stats
     hosts[host] += 1
 
     if (date < earliestDate):
