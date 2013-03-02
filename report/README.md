@@ -2,7 +2,6 @@ Common Crawl report for University of Maryland hosts
 ====================================================
 
 Code to run a new report
-------------------------
 * [report.sh](report.sh)
 * [report.py](report.py)
 
