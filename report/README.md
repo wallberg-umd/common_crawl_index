@@ -1,6 +1,8 @@
 Common Crawl report for University of Maryland hosts
 ====================================================
 
+Credit: http://jronallo.github.com/blog/common-crawl-url-index/
+
 Code to run a new report
 * [report.sh](report.sh)
 * [report.py](report.py)
